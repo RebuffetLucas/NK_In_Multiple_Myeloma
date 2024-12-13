@@ -1,0 +1,8 @@
+# Based on rocker - https://github.com/rocker-org/rocker-versioned
+FROM cosmx_azimuth
+
+MAINTAINER REBUFFET Lucas (rebuffet@ciml.univ-mrs.fr)
+
+RUN R -e "SeuratData::InstallData('reference')"
+
+CMD ["/init"]
